@@ -1,0 +1,57 @@
+mfa stategy 
+password u know + device u own
+
+
+
+Client VPN offers the following types of client authentication:
+
+Active Directory authentication (user-based)
+
+Mutual authentication (certificate-based)
+
+Single sign-on (SAML-based federated authentication) (user-based)
+
+
+
+easyrsa 
+
+ca =certificate authority 
+pki =public key 
+nopass=no password
+
+
+five files imp
+
+ca.crt
+
+server1.crt
+server1.key
+client.domain.tld.crt
+client.domain.tld.key
+
+init pki
+
+./easyrsa build-ca-nopass
+./easyrsa build-server-full server1 nopass
+
+
+./easyrsa build-client-full client.domain.tld nopass
+
+
+./easyrsa build-ca-nopass
+./easyrsa build-ca-nopass
+
+comman name
+
+
+load the certifates using cerification manager 
+
+
+vpc 10.1.0.0/16
+
+subnet 10.1.1.0/24
+
+ec2 window machine 2023
+
+
+

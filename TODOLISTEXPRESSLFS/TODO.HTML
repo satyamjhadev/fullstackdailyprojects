@@ -1,0 +1,28 @@
+<html>
+  <head><title>todo using express</title></head>
+  <body>
+    
+  <form action="/addtask" method=""post>
+    ENTER TASK <input type="text" name="currtask" id="dataInput"/>
+    <input type="button" value="ADD TASK" name="addbtn"/>
+  </form>
+  <scrip>
+      <script>
+    function saveData() {
+      const inputData = document.getElementById('dataInput').value;
+
+      fetch('http://localhost:3000/saveData', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ data: inputData }),
+      })
+        .then(response => response.text())
+        .then(data => console.log(data))
+        .catch(error => console.error('Error:', error));
+    }
+  
+  </script>
+  </body>
+</html>

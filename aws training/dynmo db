@@ -1,0 +1,39 @@
+Dynamo DB
+managed NOSQL databases service optimised for performance and scaling
+
+No sql databases
+in form of object
+each element may vary sizes and format
+
+Managed: maintainance ,provision ,patching,storage allocation 
+
+performance: load traffic increses it automatically scale keeping the performance 
+
+High availability and durablity: 99.999% 
+INTEGRATED WITH OTHER SERVICES S3,LAMBDA
+
+limitations:
+if we know the asscess pattern of our data then we should go for dynamo DB it means we know how to asscess and retrive data  
+
+structure of dynamo DB
+Table,item, attributes,indexes 
+
+when we craete the table 
+primary :partion key(unique and canot be changed after craetion of table)
+
+sort key is optional.
+
+RCU and Wcu read and write operation performed on the dynmo db table it occurs the cost measured in terms of read capicity unit and write capacity unit 
+
+to minimize the cost use global indexes.
+
+we can craete two tables with the same name in different regions bcz it is region specific 
+
+globval index(duplicate table to srt esisly but cost incrreses)
+we can create global index after craetion of tables.
+
+
+
+PITR(point in time recovery) ->continous backups 
+normal backups are scheduled backups 
+

@@ -1,0 +1,54 @@
+<html>
+  <body>
+    <div>
+    <H1 id="a">ON</H1></div>
+    
+  </body>
+
+  <script>
+const H =    document.getElementById("a");
+//content change
+
+//H.style.backgroundColor="red";
+
+// H.addEventListener("click",function(){
+//   H.innerText="OFF";
+  
+ 
+// })
+
+// const J= document.getElementById("b");
+// j.style.backgroundColor="green";
+
+
+//ON/OFF
+// H.addEventListener("click",function(){
+//   if(H.innerText=="ON"){
+//   H.innerText="OFF";}
+//   else
+//   H.innerText="ON";
+// })
+
+//click on on and a new div tag  appears on page.
+//craete
+
+
+H.addEventListener("click",function(){
+  if(H.innerText=="ON"){
+    const div=document.createElement("div");
+div.innerText="welcome to chitkara";
+div.setAttribute('id','b')
+document.body.append(div);}
+
+
+else{
+const div2=getElementById('b');
+div2.remove();
+} 
+})
+
+
+
+
+  </script>
+
