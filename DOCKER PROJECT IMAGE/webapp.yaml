@@ -1,0 +1,35 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: webapp-deployment
+  labels:
+    app: webapp
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: webapp
+  template:
+    metadata:
+      labels:
+        app: webapp
+    spec:
+      containers:
+      - name: webapp
+        image: nginxdemos/hello
+        ports:
+        - containerPort: 80
+
+---
+apiversion: v1
+kind: service
+metadata:
+  name:webapp-service
+spec:
+  type: Nodeport
+  selector:
+    app:webapp
+  ports:
+    -protocol:TCP
+    port:8080
+    targetport:80

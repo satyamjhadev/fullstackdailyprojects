@@ -1,0 +1,14 @@
+
+
+create the deployment file for that application
+
+if u want to run single application check for image on docker hub
+ngnixdemos/hello
+
+
+
+
+kind:deployment 
+kind:service 
+we have 2 port port:external port
+targetport:port of the pod 
